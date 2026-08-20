@@ -40,7 +40,7 @@ def generate_html(code):
         replacement = lambda m: f'<span style="{styles[token_type]}">{m.group(0)}</span>'
         code = re.sub(pattern, replacement, code)
 
-    return f"<pre>{code}</pre>"
+    return f'<body style="background-color: black; color: white;"><pre>{code}</pre></body>'
 
 code = argv[1] if len(argv) > 1 else "test.c"
 
